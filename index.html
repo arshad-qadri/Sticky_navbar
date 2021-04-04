@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>sticky navbar</title>
+  </head>
+  <body onscroll="myFunc()">
+    <div class="container">
+      <nav id="nav">
+        <a href="#" class="logo">Logo</a>
+        <div class="toggle" onclick="myToggle()">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+        <ul id="navShow">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Service</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="gal_tit"><h1>Gallery</h1></div>
+    <div class="gallery">
+      <img
+        src="https://cdn.pixabay.com/photo/2020/06/19/09/16/fantasy-5316369__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2016/01/29/16/57/prague-1168302__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2020/02/24/06/33/crescent-4875339__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2016/01/19/15/04/london-1149144__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2017/06/04/19/43/lighthouse-2372004__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2018/05/15/23/02/football-stadium-3404535__340.jpg"
+        alt=""
+      />
+    </div>
+
+    <script>
+      const navbar = document.getElementById('nav');
+      const navShow = document.getElementById('navShow');
+
+      function myFunc() {
+        if (document.documentElement.scrollTop > 50) {
+          navbar.classList.add('active');
+          navShow.classList.add('liActive');
+        } else {
+          navbar.classList.remove('active');
+          navShow.classList.remove('liActive');
+        }
+
+        // if (document.documentElement.scrollTop > 50) {
+        //   navbar.classList.add('active');
+        // } else if (document.documentElement.scrollTop > 0) {
+        //   navbar.classList.remove('active');
+        // }
+      }
+
+      const myToggle = () => {
+        navShow.classList.toggle('show');
+      };
+    </script>
+  </body>
+</html>

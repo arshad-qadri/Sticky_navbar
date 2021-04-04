@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: url(https://cdn.pixabay.com/photo/2013/03/02/02/41/alley-89197_960_720.jpg)
+    center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  /* background: rgba(255, 255, 255, 0.1); */
+  background: rgba(0, 128, 0, 0.801);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  transition: 1s;
+}
+nav .logo {
+  font-size: 2em;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+ul {
+  transition: 1s;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+  margin-left: 40px;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+nav.active {
+  background: rgba(0, 0, 0, 0.63);
+  padding: 15px 80px;
+}
+.gallery {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(210, 233, 241);
+}
+.gal_tit {
+  width: 100%;
+  /* height: 10vh; */
+  background-color: rgb(207, 205, 205);
+  text-align: center;
+  /* line-height: 10vh; */
+  padding: 20px 0;
+  font-size: 2em;
+  text-shadow: 10px 10px 10px black;
+}
+.gallery img {
+  width: 400px;
+  height: 250px;
+  margin: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+}
+.gallery img:hover {
+  transform: rotateY(180deg);
+}
+/* ----------------scrollbar design------------------ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  visibility: hidden !important;
+  z-index: -1 !important;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(22, 20, 20);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ------------------toggller------------------ */
+
+.bar {
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+.toggle {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 80px;
+}
+.show {
+  display: block;
+}
+
+/*--------------- responsive--------------------- */
+@media only screen and (max-width: 800px) {
+  nav {
+    justify-content: flex-start;
+  }
+  ul {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 128, 0, 0.801);
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+  }
+  ul.liActive {
+    top: 10vh;
+    background: rgba(0, 0, 0, 0.63);
+    transition: 0.5s;
+  }
+  ul li {
+    display: block;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+  nav .logo {
+    position: absolute;
+    left: 80px;
+  }
+  .toggle {
+    display: block;
+  }
+  nav.active {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gallery img {
+    width: 300px;
+    height: 150px;
+  }
+}
