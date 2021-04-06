@@ -171,3 +171,57 @@ nav.active {
     height: 150px;
   }
 }
+/* contact style */
+.contact {
+  height: 80px;
+  width: 80px;
+  background: rgba(255, 255, 255, 0.664);
+  position: fixed;
+  right: 20px;
+  top: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  z-index: 2;
+}
+.contact i {
+  font-size: 2.5em;
+}
+.contact-detail {
+  position: fixed;
+  right: -200px;
+  top: 48%;
+  height: 200px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.664);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  padding: 20px 20px;
+  border-radius: 20px;
+  z-index: 2;
+  transition: 1s;
+}
+
+.contact-detail a i {
+  font-size: 1.5em;
+}
+.contact-detail a:hover {
+  color: rgba(0, 128, 0, 0.801);
+}
+.contact-detail a span {
+  margin-left: 20px;
+}
+.contact-detail a {
+  text-decoration: none;
+  color: #000;
+}
+.contact-detail .icon {
+  /* margin: 30px 0; */
+  line-height: 55px;
+}
+.contact-detail.conatct-show {
+  right: 30px;
+  transition: 1s;
+}
